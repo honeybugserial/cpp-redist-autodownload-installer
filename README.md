@@ -21,6 +21,10 @@ It includes automatic elevation, a Rich-formatted console UI, QuickEdit-disable,
 
 ---
 
+## Download Compiled
+[Visual C++ Redistributable Auto-Downloader (vcredist_auto)](https://archive.org/details/vcredist_auto)
+
+---
 ## Requirements
 
 - Windows 10 or later
