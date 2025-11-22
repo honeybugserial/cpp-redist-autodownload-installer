@@ -24,10 +24,10 @@
 ## Download Binary
 
 **PyInstaller (single EXE)**  
-[Google Drive PyInstaller Single EXE](https://drive.google.com/file/d/1uaeeyeQXiFyeB8eIULhViLPRqvz97WeS/view?usp=drive_link)
+[Google Drive PyInstaller Single EXE](https://drive.google.com)
 
 **CX-Freeze (folder build)**  
-[Google Drive CX Freeze Folder](https://drive.google.com/file/d/1baCAxdvmeDsjulmDMcwrD2p-s7R5Rz6h/view?usp=drive_link)
+[Google Drive CX Freeze Folder](https://drive.google.com)
 
 
 
