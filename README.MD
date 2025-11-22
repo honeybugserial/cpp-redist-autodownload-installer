@@ -16,32 +16,38 @@
 - Rich-styled console output (`[ # ]`, `[ + ]`, `[WARN]`, `[ERROR]`)
 - Disables Windows QuickEdit mode to prevent accidental pauses
 - Automatic cleanup of ZIP and extraction directory
-- Works as a Python script or PyInstaller/Nuitka-frozen EXE
+- Works as a Python script or PyInstaller/Nuitka/CX-Freeze frozen EXE
+- **Supports `--auto-accept` flag for unattended, non-interactive installation**
 
 ---
 
 ## Download Binary
 
-[Download Google Drive](https://drive.google.com/file/d/1GCMQMI1nvA8HIAEXCcCsr4hwd9MqvrGz/view?usp=drive_link)
+**PyInstaller (single EXE)**  
+[Google Drive PyInstaller Single EXE](https://drive.google.com/file/d/1uaeeyeQXiFyeB8eIULhViLPRqvz97WeS/view?usp=drive_link)
 
-[Download Archive.org](https://archive.org/details/vcredist_auto)
+**CX-Freeze (folder build)**  
+[Google Drive CX Freeze Folder](https://drive.google.com/file/d/1baCAxdvmeDsjulmDMcwrD2p-s7R5Rz6h/view?usp=drive_link)
+
+
 
 ---
+
 ## Requirements
 
 - Windows 10 or later
 - Administrator privileges (auto-elevates if needed)
 - Python 3.8+ if running as a script
 - Required Python packages:
-  - \`requests\`
-  - \`rich\`
-  - \`tqdm\`
+  - `requests`
+  - `rich`
+  - `tqdm`
 
 Install dependencies:
 
-\`\`\`bash
+```bash
 pip install requests rich tqdm
-\`\`\`
+```
 
 ---
 
@@ -49,28 +55,38 @@ pip install requests rich tqdm
 
 ### Run as a Python script
 
-\`\`\`bash
+```bash
 python vcredist_auto.py
-\`\`\`
+```
 
 ### Run as a frozen EXE
 
-If bundled with PyInstaller/Nuitka, no Python installation is required.
+Double-click or:
 
-Double-click the executable, or run:
-
-\`\`\`bash
+```bash
 vcredist_auto.exe
-\`\`\`
+```
 
-The tool will:
+### Unattended / silent-style mode
 
-1. Request elevation (if not already elevated)
-2. Download the latest TechPowerUp VC++ redistributable bundle
-3. Extract all installers
-4. Execute them in proper version order
-5. Remove temporary files
-6. Present a final confirmation screen
+To skip:
+
+- the initial “Proceed?” confirmation
+- the final “Press ENTER to exit”
+
+Use:
+
+```bash
+vcredist_auto.exe --auto-accept
+```
+
+Or when running as a Python script:
+
+```bash
+python vcredist_auto.py --auto-accept
+```
+
+This suppresses all interactive prompts while still showing normal installation output.
 
 ---
 
@@ -78,12 +94,12 @@ The tool will:
 
 When running:
 
-\`\`\`
+```
 <working_dir>/
     vcredist_auto.py or vcredist_auto.exe
     vcredist_xxx.zip       (downloaded)
     vcredist_xxx/          (extracted installers)
-\`\`\`
+```
 
 After cleanup, only the original script or EXE remains.
 
@@ -91,6 +107,6 @@ After cleanup, only the original script or EXE remains.
 
 ## Notes
 
-- The script relies on TechPowerUp’s posted redirect to locate the actual download URL.
+- The script relies on TechPowerUp’s redirect to locate the download URL.
 - Installation switches differ per redistributable version (handled internally).
-- x64 installers are skipped on 32-bit systems by design.
+- x64 installers are skipped on 32-bit systems.
