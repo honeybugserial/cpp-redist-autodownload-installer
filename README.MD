@@ -1,8 +1,7 @@
-```
 # Visual C++ Redistributable Auto-Downloader & Installer
 
-This script automates downloading, extracting, installing, and cleaning up all Microsoft Visual C++ Redistributable packages using a TechPowerUp mirror.
-It includes automatic elevation, a Rich-formatted console UI, QuickEdit-disable, and progress-aware downloads via `tqdm`.
+![Visual 01](https://github.com/honeybugserial/cpp-redist-autodownload-installer/blob/main/Visual01.png)
+![Visual 02](https://github.com/honeybugserial/cpp-redist-autodownload-installer/blob/main/visual02.png)
 
 ---
 
@@ -92,10 +91,3 @@ After cleanup, only the original script or EXE remains.
 - The script relies on TechPowerUp’s posted redirect to locate the actual download URL.
 - Installation switches differ per redistributable version (handled internally).
 - x64 installers are skipped on 32-bit systems by design.
-
----
-
-## License
-
-MIT License (optional — replace or remove as needed).
-```
