@@ -20,8 +20,10 @@
 
 ---
 
-## Download Compiled
-[Visual C++ Redistributable Auto-Downloader (vcredist_auto)](https://archive.org/details/vcredist_auto)
+## Download Binary
+
+[Download Google Drive](https://drive.google.com/file/d/1GCMQMI1nvA8HIAEXCcCsr4hwd9MqvrGz/view?usp=drive_link)
+[Download Archive.org]](https://archive.org/details/vcredist_auto)
 
 ---
 ## Requirements
